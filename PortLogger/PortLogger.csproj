@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+    <PropertyGroup>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>PortLogger</ToolCommandName>
+        <PackageOutputPath>./nupkg</PackageOutputPath>
+        <Title>Port Logger</Title>
+        <Description>A tool to log the traffic between 2 processes and act as an proxy. It can help debug issues with the communication of any process.</Description>
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <PackageId>PortLogger</PackageId>
+        <Authors>doxakis</Authors>
+        <PackageProjectUrl>https://github.com/doxakis/PortLogger</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/doxakis/PortLogger/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/doxakis/PortLogger</RepositoryUrl>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    </ItemGroup>
+</Project>
