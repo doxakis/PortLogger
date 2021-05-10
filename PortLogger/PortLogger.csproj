@@ -9,7 +9,7 @@
         <PackageOutputPath>./nupkg</PackageOutputPath>
         <Title>Port Logger</Title>
         <Description>A tool to log the traffic between 2 processes and act as an proxy. It can help debug issues with the communication of any process.</Description>
-        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionPrefix>1.0.1</VersionPrefix>
         <PackageId>PortLogger</PackageId>
         <Authors>doxakis</Authors>
         <PackageProjectUrl>https://github.com/doxakis/PortLogger</PackageProjectUrl>

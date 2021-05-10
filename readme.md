@@ -9,7 +9,7 @@ Let's say you want to forward the port 81 to the host localhost with the port 80
 # Installation
 First, make sure to install the .net core sdk. Then, run the following command in a terminal:
 
-`dotnet tool install -g PortLogger --version 1.0.0`
+`dotnet tool install -g PortLogger --version 1.0.1`
 
 (To uninstall: `dotnet tool uninstall -g PortLogger`)
 

@@ -92,7 +92,7 @@ namespace PortLogger
                 await using var streamClient = client.GetStream();
                 using var server = new TcpClient();
                 await server.ConnectAsync(config.OutgoingHost, config.OutgoingPort);
-                var streamServer = server.GetStream();
+                await using var streamServer = server.GetStream();
 
                 await Task.WhenAll(
                     CopyToAsync(streamClient, streamServer, true, sessionId, connectionId, config, ct),
