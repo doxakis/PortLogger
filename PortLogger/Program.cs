@@ -21,7 +21,7 @@ namespace PortLogger
             var sessionId = DateTime.Now.ToString("yyyy-MM-dd HH.mm.ss");
             var folder = Path.Combine(config.DestinationFolder, sessionId);
             Directory.CreateDirectory(folder);
-            
+
             await ListenAsync(config, sessionId);
         }
 
@@ -35,7 +35,7 @@ namespace PortLogger
 
                 var cts = new CancellationTokenSource();
                 var task = ListenIncomingRequestsAsync(config, server, sessionId, cts.Token);
-                
+
                 Console.WriteLine("Press enter to stop.");
                 Console.ReadLine();
 
@@ -80,7 +80,8 @@ namespace PortLogger
             }
         }
 
-        private static async void HandleConnectionAsync(TcpClient client,
+        private static async void HandleConnectionAsync(
+            TcpClient client,
             int connectionId,
             string sessionId,
             Config config,
@@ -112,7 +113,8 @@ namespace PortLogger
             Console.WriteLine(DateTimeOffset.Now + ": Closing connection #" + connectionId);
         }
 
-        private static async Task CopyToAsync(Stream origin,
+        private static async Task CopyToAsync(
+            Stream origin,
             Stream destination,
             bool isClient,
             string sessionId,
@@ -134,7 +136,7 @@ namespace PortLogger
                     var bytesRead = await origin.ReadAsync(buffer, ct);
                     if (bytesRead == 0)
                         break;
-                    
+
                     try
                     {
                         await using var stream = new FileStream(path, FileMode.Append);
